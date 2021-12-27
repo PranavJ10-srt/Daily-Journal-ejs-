@@ -1,0 +1,14 @@
+ <%- include("partials/header");-%>  <!--3rd step   , 4th step is to move header and footer.ejs to partialsfolder and update path inside include-->
+    <h1>Home</h1> <!-- 1st step-->
+     <p><%= para%> </p><!-- 2nd step -->
+
+    <!-- challenge 12 was to print contents of array in log and 13 was to print only the titles in log-->
+     <% home_posts.forEach(function(postobject){%>      <!-- challenge14-->
+         <%console.log(postobject);%>
+        <h1><%=postobject.title%></h1>
+        <p>                                           <!-- challenge15-->
+          <%=(postobject.postbody).slice(0,101) + "...."%><a href="posts/<%=postobject.title%>">Read More..</a>     <!-- challenge 20 - limit to 100char on home page for a post-->
+          </p>
+     <%});%>
+
+<%-include("partials/footer");-%>

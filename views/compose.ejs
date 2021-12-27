@@ -1,0 +1,11 @@
+<%- include("partials/header");%>          <!--6th step-->
+
+<h1>Compose</h1>
+<form method="post" action="/compose">   <!-- 8th step -->
+<label>Title</label>
+<input type="text" name="title_of_blog" class="form-control form-control-lg"><br>
+<label>Post</label>
+<textarea name="content_of_blog" rows="8" cols="80" class="form-control"></textarea><br>  <!-- challenge 9-->
+<button type="Submit" name="button" class="btn btn-primary btn-lg">Publish</button>  <!--7th step-->
+</form>
+<%- include("partials/footer");%>
